@@ -6,7 +6,7 @@ to use it
 
 import listener 
 
-execute [threads]
+execute [threads(host,port)]
 
 execute [add-to-startup] used to execute your app when the computer is turned on!
 
