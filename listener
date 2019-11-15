@@ -24,9 +24,9 @@ def sockshot(host,port):
     s.sendall(shot)
 #thread control
 
-def threads ():
-    sock.start()
-    sockshot.start()
+def threads (host,port):
+    sock.start(host,port)
+    sockshot.start(host,port)
     
 
 # startup when turned on
