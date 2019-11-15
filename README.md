@@ -1,13 +1,2 @@
-THIS aplication can be used as :
-     monitoring a victims device 
-requirements :
-     a reciever
-to use it 
-
-import listener 
-
-execute [threads(host,port)]
-
-execute [add-to-startup] used to execute your app when the computer is turned on!
-
-save ,enjoy!
+IT IS NOW [HACKINGSTUN] !
+https://github.com/timberh789/hackingstun
